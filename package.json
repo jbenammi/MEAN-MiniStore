@@ -1,0 +1,24 @@
+{
+  "name": "mean-orderscustomers",
+  "version": "1.0.0",
+  "description": "This is a Coding Dojo Assignment for full MEAN",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ".git"
+  },
+  "author": "Jonathan Ben-Ammi",
+  "license": "ISC",
+  "dependencies": {
+    "angular-moment": "^1.0.0-beta.6",
+    "angular-utils-pagination": "^0.11.1",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "moment": "^2.13.0",
+    "mongoose": "^4.5.1"
+  }
+}

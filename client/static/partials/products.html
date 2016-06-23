@@ -1,0 +1,28 @@
+<div class="row section" ng-controller='productsController as proCon'>
+	<div class="col s2">
+		<input type="text" placeholder="search..." ng-model='filter_name' />
+		<h6 class="center"><u>Add a new product</u></h6>
+		<form>
+			<label>Name</label>
+			<input type="text" ng-model='proCon.newProduct.name' />
+			<label>Image Location</label>
+			<input type="text" ng-model='proCon.newProduct.img' />
+			<label>Description</label>
+			<textarea ng-model='proCon.newProduct.description'></textarea>
+			<label>Initial Quantity (max 999)</label>
+			<input type="number" ng-model='proCon.newProduct.qty' />
+			<button class="btn waves-effect waves-light blue right" ng-click='proCon.create()'>Create</button>
+		</form>
+	</div>
+	<div class="col s10">
+		<div class="row">
+			<div ng-repeat='product in proCon.products | filter: filter_name | orderBy: updatedAt' class="col s3">
+				<div class="section"></div>
+				<img class='responsive-img' src="{{product.img}}">
+				<p class="center">{{product.name}}</p>
+				<p class="center">(<span>{{product.qty}}</span> in stock)</p>
+<!-- 				<button class="btn waves-effect waves-light" ng-click='proCon.delete(product._id)'>Remove</button> -->
+			</div>
+		</div>
+	</div>
+</div>
